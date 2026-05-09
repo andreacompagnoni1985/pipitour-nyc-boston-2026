@@ -1,20 +1,21 @@
-PipiTour PWA Premium
+PipiTour Companion App V2
 
-COME PUBBLICARLA SU GITHUB PAGES:
+Pubblicazione GitHub Pages:
 1. Estrai lo ZIP.
-2. Crea un repository GitHub.
-3. Carica tutti i file nella root:
-   - index.html
-   - manifest.webmanifest
-   - service-worker.js
-   - icon-192.png
-   - icon-512.png
-4. Vai in Settings > Pages.
+2. Carica tutti i file nella root del repository.
+3. Carica anche la cartella documents.
+4. GitHub > Settings > Pages.
 5. Source: Deploy from a branch.
 6. Branch: main / root.
-7. Apri il link GitHub Pages da Safari/Chrome.
-8. Aggiungi alla schermata Home.
+7. Apri il link GitHub Pages da Safari.
+8. Condividi > Aggiungi alla schermata Home.
 
-Nota:
-Le PWA su iPhone richiedono HTTPS o localhost. Da file locale non si installano correttamente.
-GitHub Pages è gratis e usa HTTPS.
+Documenti:
+Quando avrai PDF/screenshot prenotazioni, inseriscili in /documents con questi nomi:
+voli.pdf
+hotel-nyc.pdf
+hotel-boston.pdf
+amtrak.pdf
+red-sox.pdf
+assicurazione.pdf
+esta.pdf

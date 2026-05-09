@@ -1,7 +1,7 @@
 {
   "name": "PipiTour NYC & Boston 2026",
   "short_name": "PipiTour",
-  "description": "Travel companion premium per New York e Boston 2026",
+  "description": "Companion app premium per New York e Boston 2026",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
