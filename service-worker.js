@@ -1,21 +1,5 @@
-PipiTour Companion App V2
-
-Pubblicazione GitHub Pages:
-1. Estrai lo ZIP.
-2. Carica tutti i file nella root del repository.
-3. Carica anche la cartella documents.
-4. GitHub > Settings > Pages.
-5. Source: Deploy from a branch.
-6. Branch: main / root.
-7. Apri il link GitHub Pages da Safari.
-8. Condividi > Aggiungi alla schermata Home.
-
-Documenti:
-Quando avrai PDF/screenshot prenotazioni, inseriscili in /documents con questi nomi:
-voli.pdf
-hotel-nyc.pdf
-hotel-boston.pdf
-amtrak.pdf
-red-sox.pdf
-assicurazione.pdf
-esta.pdf
+const CACHE_NAME='pipitour-companion-v2';
+const ASSETS=['./','./index.html','./manifest.webmanifest','./icon-192.png','./icon-512.png','./documents/README.txt'];
+self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE_NAME).then(c=>c.addAll(ASSETS)));self.skipWaiting();});
+self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.map(k=>k!==CACHE_NAME?caches.delete(k):null))));self.clients.claim();});
+self.addEventListener('fetch',e=>{e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request).catch(()=>caches.match('./index.html'))));});
